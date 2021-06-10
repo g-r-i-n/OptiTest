@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">OptiTest</string>
+    <string name="title_activity_maps">Routes</string>
+    <string name="to_google_maps_button">Open in Google Map</string>
+    <string name="to_waze_maps_button">Open in Waze</string>
+    <string name="hint_from">From</string>
+    <string name="hint_to">To</string>
+    <string name="something_wrong">Something was wrong...</string>
+</resources>

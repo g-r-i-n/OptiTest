@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">OptiTest</string>
+    <string name="title_activity_maps">Маршруты</string>
+    <string name="to_google_maps_button">Открыть в Google Map</string>
+    <string name="to_waze_maps_button">Открыть в Waze</string>
+    <string name="hint_from">Откуда</string>
+    <string name="hint_to">Куда</string>
+    <string name="something_wrong">Что-то пошло не так...</string>
+</resources>
