@@ -36,7 +36,6 @@ import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.libraries.places.api.Places;
 import com.google.android.libraries.places.api.model.Place;
-import com.google.android.libraries.places.api.net.PlacesClient;
 import com.google.android.libraries.places.widget.AutocompleteSupportFragment;
 import com.google.android.libraries.places.widget.listener.PlaceSelectionListener;
 
@@ -153,7 +152,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         progressBar.setVisibility(View.GONE);
                         if (direction != null && direction.isOK()) {
                             toGoogleMapsButton.setEnabled(true);
-                            routeSucess(direction, from, to);
+                            routeSuccess(direction, from, to);
                         } else {
                             Toast.makeText(MapsActivity.this, R.string.something_wrong, Toast.LENGTH_LONG).show();
                         }
@@ -167,7 +166,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 });
     }
 
-    private void routeSucess(Direction direction, LatLng sourceLatLng, LatLng destinationLatLng) {
+    private void routeSuccess(Direction direction, LatLng sourceLatLng, LatLng destinationLatLng) {
         mMap.clear();
         for (Route route : direction.getRouteList()) {
             PolylineOptions polyoptions = new PolylineOptions();
@@ -216,7 +215,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             Log.i(TAG, "Place: " + place.getName() + ", " + place.getId());
             rememberPosition(focus, place.getLatLng());
         }
-
 
         @Override
         public void onError(@NonNull Status status) {
